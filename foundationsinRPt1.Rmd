@@ -47,8 +47,28 @@ mpgHigh<- mtcars[mtcars$mpg> mean(mtcars$mpg),]
 14 
 
 10. Load the ggplot2 library
+```{r}
+library(ggplot2)
+```
 11. Open the diamonds dataset. How do you know that you've loaded it?
+```{r}
+data(diamonds)
+```
 12. Create a new dataframe that has diamonds greater than 1 carat and an ideal cut. 
+```{r}
+subDiamonds<- subset(diamonds, diamonds$carat>1 & diamonds$cut == "Ideal")
+```
 13. Find the mean and standard deviation of price for this new dataset. 
+```{r}
+mean(subDiamonds$price)
+sd(subDiamonds$price)
+```
 14. Create another new dataframe that includes all diamonds with a price between $2500 and $5000. 
+```{r}
+midDiamonds<- subset(diamonds, diamonds$price>= 2500 & diamonds$price<=5000)
+```
 15. Which color occurs most in this subset? 
+```{r}
+library(modeest)
+mfv(midDiamonds$color)
+```
