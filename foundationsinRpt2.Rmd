@@ -30,6 +30,7 @@ head(billboard, n=5)
 ```{r}
 jayZ<- billboard %>% filter(artist=="Jay-Z")
 ```
+5 songs in this dataset
 2. In the original dataset, use filter to find information about the song "All the small things." What was the highest position this song reached on the billboard 100? 
 ```{r}
 billboard %>% filter(track=="All The Small Things")
